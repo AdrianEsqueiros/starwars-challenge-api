@@ -2,8 +2,8 @@ import { Injectable, Logger } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { AxiosError } from 'axios';
 import { catchError, firstValueFrom } from 'rxjs';
-import { IPeople } from 'src/domain/models/people.interface';
-import { mapToInterface } from 'src/utils/mapper.util';
+import { IPeople } from '@/domain/models';
+import { mapToInterface } from '@/infrastructure/utils/mapper.util';
 
 @Injectable()
 export class StarWarsService {
